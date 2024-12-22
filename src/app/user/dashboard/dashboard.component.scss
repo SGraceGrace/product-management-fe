@@ -1,0 +1,35 @@
+
+.content {
+    padding: 50px;
+    width: 1000px;
+}
+
+table {
+    margin-top: 20px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    justify-self: center;
+    align-self: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.page {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.example-card {
+    width: 20%;
+    background-color: #5179b5;
+    color: white;
+}
+
+.group {
+    color: white;
+}

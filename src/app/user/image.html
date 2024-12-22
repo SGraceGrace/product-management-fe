@@ -1,0 +1,9 @@
+<div class="img-comtainer">
+    <h1 mat-dialog-title>QR Code</h1>
+    <div mat-dialog-content>
+      <img [src]="'data:image/png;base64,' + data.qrCode" alt="QR Code">
+    </div>
+    <div mat-dialog-actions>
+      <button mat-button mat-dialog-close class="gbutton">Close</button>
+    </div>
+</div>

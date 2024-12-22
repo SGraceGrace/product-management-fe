@@ -1,0 +1,28 @@
+
+.content {
+    padding: 50px;
+    width: 1000px;
+}
+
+table {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    justify-self: center;
+    align-self: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.page {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.button {
+    color: #38598b !important;
+    background-color: white;
+}
+
+.button:hover {
+    background-color: #e5effc !important;
+}

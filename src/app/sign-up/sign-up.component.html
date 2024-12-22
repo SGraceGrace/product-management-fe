@@ -1,0 +1,112 @@
+<div class="container">
+  <div class="card">
+    <div class="heading">
+      <p class="nav1">Welcome to InventFlow Systems</p>
+      <p class="nav">
+        Already have an account? <a routerLink="/login" routerLinkActive="active">Login</a>
+      </p>
+    </div>
+
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <div class="content">
+        <div class="example-container">
+          <mat-form-field class="field">
+            <mat-label class="label">Name</mat-label>
+            <input matInput required formControlName="name" />
+          </mat-form-field>
+          <span *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+            <span *ngIf="name?.hasError('required')"> Name is required. </span>
+          </span>
+        </div>
+        <div class="example-container">
+          <mat-form-field class="field">
+            <mat-label>Email</mat-label>
+            <input
+              matInput
+              placeholder="pat@example.com"
+              required
+              formControlName="email"
+            />
+          </mat-form-field>
+          <span *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+            <span *ngIf="email?.hasError('required')">
+              Email is required.
+            </span>
+          </span>
+        </div>
+        <div class="example-container">
+          <mat-form-field class="field">
+            <mat-label>Phone no</mat-label>
+            <input matInput required formControlName="phoneNo" />
+          </mat-form-field>
+          <span
+            *ngIf="phoneNo?.invalid && (phoneNo?.dirty || phoneNo?.touched)"
+          >
+            <span *ngIf="phoneNo?.hasError('required')">
+              Phone no is required.
+            </span>
+          </span>
+        </div>
+        <div class="example-container">
+          <mat-form-field class="field">
+            <mat-label>Username</mat-label>
+            <input matInput required formControlName="userName" />
+          </mat-form-field>
+          <span
+            *ngIf="userName?.invalid && (userName?.dirty || userName?.touched)"
+          >
+            <span *ngIf="userName?.hasError('required')">
+              Username is required.
+            </span>
+          </span>
+        </div>
+        <div class="example-container">
+          <mat-form-field class="field">
+            <mat-label>Password</mat-label>
+            <input matInput required formControlName="password" />
+          </mat-form-field>
+          <span
+            *ngIf="password?.invalid && (password?.dirty || password?.touched)"
+          >
+            <span *ngIf="password?.hasError('required')">
+              Password is required.
+            </span>
+            <span *ngIf="password?.hasError('pattern')">
+              Password should have 1 uppercase, 1 lowercase, 1 number, and be
+              between 8 and 20 characters
+            </span>
+          </span>
+        </div>
+        <div class="example-container">
+          <mat-form-field class="field">
+            <mat-label>Confirn Password</mat-label>
+            <input matInput required formControlName="cpassword" />
+          </mat-form-field>
+          <span
+            *ngIf="
+              cpassword?.invalid && (cpassword?.dirty || cpassword?.touched)
+            "
+          >
+            <span *ngIf="cpassword?.hasError('required')">
+              Confirm Password is required.
+            </span>
+          </span>
+          <span
+              *ngIf="
+                profileForm.hasError('passwordsMismatch') &&
+                (profileForm.touched || profileForm.dirty)
+              "
+            >
+              Password not match
+            </span> 
+        </div>
+      </div>
+      <div class="example-button-container">
+        <button mat-fab extended type="submit" [disabled]="!profileForm.valid">
+          SIGN UP
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<router-outlet></router-outlet>

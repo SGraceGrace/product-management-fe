@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="picture">
+    <mat-card class="example-card" appearance="outlined">
+      <img class="img" src="/user.png" alt="Photo of a Shiba Inu" />
+      <mat-card-content class="det">
+        <p>Name : {{ user.name | titlecase }}</p>
+        <p *ngIf="isAdmin">{{ admin }}</p>
+        <p *ngIf="isManager">{{ manager }}</p>
+        <p *ngIf="isStaff">{{ staff }}</p>
+      </mat-card-content>
+      <mat-card-actions class="button-div">
+        <button mat-button class="button" (click)="openDialog()">EDIT</button>
+        <button mat-button class="button" (click)="delete()">
+          DELETE ACCOUNT
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <div class="content">
+    <mat-card class="example-card-table" appearance="outlined">
+      <h4>My Profile</h4>
+      <table class="user-details" border="1">
+        <tr>
+          <td>Name:</td>
+          <td>
+            {{ user.name }}
+          </td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td>
+            {{ user.email }}
+          </td>
+        </tr>
+        <tr>
+          <td>Username:</td>
+          <td>
+            {{ user.userName }}
+          </td>
+        </tr>
+        <tr>
+          <td>Phone No:</td>
+          <td>
+            {{ user.phoneNo }}
+          </td>
+        </tr>
+        <tr>
+          <td>Role:</td>
+          <td>
+            {{ user.role }}
+          </td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td>
+            {{ user.password }}
+          </td>
+        </tr>
+        <tr>
+          <td>Status:</td>
+          <td>
+            {{ user.status }}
+          </td>
+        </tr>
+      </table>
+    </mat-card>
+  </div>
+</div>

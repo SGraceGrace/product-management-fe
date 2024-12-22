@@ -1,0 +1,73 @@
+// ng g schematics-scss-migrate:scss-migrate
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 600px;
+}
+
+p {
+  color: #38598b;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.example-container {
+  width: 300px;
+}
+
+.field {
+  width: 100%;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: transparent !important;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 6px;
+  padding: 0 10px;
+}
+
+::ng-deep
+  .mdc-text-field--filled:not(.mdc-text-field--disabled)
+  .mdc-text-field__input {
+  color: #333;
+  font-size: 16px;
+}
+
+::ng-deep
+  .mdc-text-field--filled:not(.mdc-text-field--disabled)
+  .mdc-line-ripple::after {
+  border-bottom-color: #38598b !important;
+}
+
+::ng-deep .mat-mdc-form-field.mat-focused .mat-mdc-input-element {
+  caret-color: #38598b !important;
+}
+
+::ng-deep .mat-mdc-form-field.mat-focused .mdc-floating-label {
+  color: #38598b !important;
+}
+
+.button:hover {
+  background-color: #e6eefc !important;
+}
+
+button[disabled] {
+  pointer-events: all !important;
+  cursor: not-allowed !important;
+  opacity: 0.5;
+}
+
+.button {
+  color: #38598b;
+}

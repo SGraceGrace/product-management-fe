@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="header">
+    <div class="header-title">
+      <mat-icon
+        aria-hidden="false"
+        aria-label="Example home icon"
+        fontIcon="home"
+      ></mat-icon>
+      InventFlow Systems
+    </div>
+    <div class="second-header"></div>
+    <div class="third-header">
+      <h3>Hi, {{ userData | titlecase }}</h3>
+      <a routerLink="profile" class="menu"
+        ><i class="fa-regular fa-user"></i
+      ></a>
+      <button mat-raised-button class="logout" (click)="logout()">
+        Logout<i class="fa-solid fa-arrow-right-from-bracket"></i>
+      </button>
+    </div>
+  </div>
+  <div class="content">
+    <div class="side">
+      <div class="side-nav">
+        <div class="heading">CATALOG</div>
+        <div class="nav">
+          <a routerLink="dashboard" class="title" routerLinkActive="active">
+            <i class="fa-solid fa-chart-simple"></i>DASHBOARD<mat-icon
+              >arrow_forward_ios</mat-icon
+            >
+          </a>
+          <a routerLink="product" class="title" routerLinkActive="active">
+            <i class="fa-solid fa-shirt"></i>PRODUCT<mat-icon
+              >arrow_forward_ios</mat-icon
+            >
+          </a>
+          <a routerLink="stocks" class="title" routerLinkActive="active"
+            ><i class="fa-solid fa-cart-shopping"></i>STOCKS<mat-icon
+              >arrow_forward_ios</mat-icon
+            ></a
+          >
+          <a routerLink="company" class="title" routerLinkActive="active"
+            ><i class="fa-solid fa-building"></i>COMPANIES<mat-icon
+              >arrow_forward_ios</mat-icon
+            ></a
+          >
+          <a routerLink="warehouse" class="title" routerLinkActive="active"
+            ><i class="fa-solid fa-warehouse"></i>WAREHOUSE<mat-icon
+              >arrow_forward_ios</mat-icon
+            ></a
+          >
+          <a routerLink="users" class="title" routerLinkActive="active"
+            ><i class="fa-solid fa-users"></i>USERS<mat-icon
+              >arrow_forward_ios</mat-icon
+            ></a
+          >
+        </div>
+      </div>
+      <div class="generate">
+        <div class="gene">
+          QR CODE GENERATOR
+          <button mat-raised-button class="gbutton" (click)="generate()">Generate</button>
+        </div>
+        <div class="gene">
+          <div>PRODUCT BUILDER</div>
+          <button mat-raised-button class="gbutton" (click)="generateExcel()">Generate</button>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

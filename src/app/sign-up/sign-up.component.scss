@@ -1,0 +1,114 @@
+
+// ng g schematics-scss-migrate:scss-migrate
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #38598b;
+  height: 100vh;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 50%;
+  background-color: #ececec;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+p {
+  color: #38598b;
+  text-align: center;
+}
+
+.nav1 {
+  font-size: 30px;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.example-container {
+  width: 300px;
+}
+
+.field {
+  width: 100%;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: transparent;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 6px;
+  padding: 0 10px;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input {
+  color: #333;
+  font-size: 16px;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::after {
+  border-bottom-color: #38598b !important;
+}
+
+::ng-deep .mat-mdc-form-field.mat-focused .mat-mdc-input-element {
+  caret-color: #38598b; 
+}
+
+::ng-deep .mat-mdc-form-field.mat-focused .mdc-floating-label {
+  color: #38598b !important; 
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  align-items: center;  
+  box-sizing: border-box;
+}
+
+button.mat-mdc-fab {
+  background-color: #38598b !important;
+  color: white !important;
+  transition: background-color 0.3s ease;
+  border-radius: 0;
+  width: 50%;
+}
+
+button.mat-mdc-fab:hover {
+  background-color: #2a446c !important;
+}
+
+button[disabled] {
+  pointer-events: all !important; 
+  cursor: not-allowed !important;
+  opacity: 0.5; 
+}
+
+span {
+  margin-top: -5px;
+  font-size: 12px;
+  color: #ba1a1a;
+}
+
+:host ::ng-deep .mat-mdc-form-field-subscript-wrapper {
+  margin-top: -5px;
+  padding: 0;
+}

@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="heading">
+    <p class="nav1">Create Warehouse</p>
+  </div>
+
+  <form [formGroup]="createProductForm" (ngSubmit)="onSubmit()">
+    <div class="content">
+      <div class="example-container">
+        <mat-form-field class="field">
+          <mat-label>Product Name</mat-label>
+          <input matInput required formControlName="productName" />
+        </mat-form-field>
+      </div>
+      <div class="example-container">
+        <mat-form-field class="field">
+          <mat-label>Product Type</mat-label>
+          <input matInput required formControlName="productType" />
+        </mat-form-field>
+      </div>
+      <div class="example-container">
+        <mat-form-field class="field">
+          <mat-label>Description</mat-label>
+          <input matInput required formControlName="description" />
+        </mat-form-field>
+      </div>
+      <div class="example-container">
+        <mat-form-field class="field">
+          <mat-label>Price</mat-label>
+          <input matInput required formControlName="price" />
+        </mat-form-field>
+      </div>
+    </div>
+    <button
+      mat-button
+      type="submit"
+      class="button"
+      [disabled]="!createProductForm.valid"
+    >
+      Create
+    </button>
+    <button mat-button class="button" type="button" (click)="onNoClick()">
+      No Thanks
+    </button>
+  </form>
+</div>

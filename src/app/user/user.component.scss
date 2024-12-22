@@ -1,0 +1,152 @@
+.container {
+  //   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+}
+
+.header {
+  display: flex;
+  height: 50px;
+  color: #38598b;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.header-title {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 25px;
+}
+
+.second-header {
+  flex: 1;
+}
+
+.third-header {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #38598b;
+}
+
+.logout {
+  background-color: #38598b !important;
+  color: white !important;
+  width: 110px !important;
+  height: 30px !important;
+}
+
+.menu {
+  cursor: pointer;
+  font-size: 20px;
+  color: #38598b;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 20%;
+  gap: 20px;
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #38598b;
+  color: white;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 40px;
+  width: 100%;
+  padding: 7px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px -2px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.title {
+  font-size: 18px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 50px;
+  color: white;
+  text-decoration: none;
+}
+
+.side-nav a:hover {
+  background-color: #2d4f7a;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px -2px;
+  border-radius: 50px;
+}
+
+.title.active {
+  text-decoration: underline;
+  font-size: 22px;
+}
+
+.generate {
+  display: flex;
+  gap: 10px;
+}
+
+.gene {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: #38598b !important;
+  border-radius: 25px;
+  color: white !important;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.gbutton {
+  background-color: white;
+  color: #38598b !important;
+}
+
+.container-dialog {
+  background-color: white;
+  padding: 20px;
+}
+
+table {
+  margin-top: 20px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  justify-self: center;
+  align-self: center;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.page {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
